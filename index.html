@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="flex-container">
+            <h1 class="nav-title">DojoWeather</h1>
+            <ul class="nav-links">
+                <li><a href="#" onclick="alert('Loading weather report...')">Burbank</a></li>
+                <li><a href="#" onclick="alert('Loading weather report...')">Chicago</a></li>
+                <li><a href="#" onclick="alert('Loading weather report...')">Dallas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="flex-top">
+            <h2>San Jose</h2>
+            <div>
+                <label for="unit">show temperature in</label>
+                <select name="unit" onchange="changeTemp(this, 'degree')">
+                    <option value="c"><span>&#8451;</span></option>
+                    <option value="f"><span>&#8457;</span></option>
+                </select>
+            </div>
+        </div>
+        <div class="flex-weather-container">
+            <div class="weather-box">
+                <h3>Today</h3>
+                <img src="imgs/some_rain.png" alt="Rainy cloud image">
+                <p>some rain</p>
+                <div class="flex-weather-container">
+                    <h3 class="degree high">24°</h3>
+                    <h3 class="degree low">18°</h3>
+                </div>
+            </div>
+            <div class="weather-box">
+                <h3>Tomorrow</h3>
+                <img src="imgs/some_sun.png" alt="Sun image">
+                <p>some sun</p>
+                <div class="flex-weather-container">
+                    <h3 class="degree high">27°</h3>
+                    <h3 class="degree low">19°</h3>
+                </div>
+            </div>
+            <div class="weather-box">
+                <h3>Friday</h3>
+                <img src="imgs/some_clouds.png" alt="Cloud image">
+                <p>some clouds</p>
+                <div class="flex-weather-container">
+                    <h3 class="degree high">21°</h3>
+                    <h3 class="degree low">16°</h3>
+                </div>
+            </div>
+            <div class="weather-box">
+                <h3>Saturday</h3>
+                <img src="imgs/some_sun.png" alt="Sun image">
+                <p>some sun</p>
+                <div class="flex-weather-container">
+                    <h3 class="degree high">26°</h3>
+                    <h3 class="degree low">21°</h3>
+                </div>
+            </div>
+        </div>
+        <div id="flex-msg-box">
+            <img src="imgs/cookie.png" alt="cookie">
+            <div id="msg">
+                <h3>Stop! Cookie time!</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media feature and to analyze our traffic. <a href="#">Read more...</a></p>
+            </div>
+            <button id="accept-btn" onclick="removeMsg('flex-msg-box')">I Accept</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
